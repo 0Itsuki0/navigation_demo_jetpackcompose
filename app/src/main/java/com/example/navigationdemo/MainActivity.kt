@@ -43,20 +43,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             NavigationDemoTheme {
-                // A surface container using the 'background' color from the theme
                 ContentView()
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -150,8 +142,6 @@ fun ContentView() {
 
         }
     }
-
-
 }
 
 @Composable
@@ -245,6 +235,5 @@ enum class Route(val title: String) {
 fun GreetingPreview() {
     NavigationDemoTheme {
         ContentView()
-//        TopBar(title = "title", onBackButtonPress = {})
     }
 }
